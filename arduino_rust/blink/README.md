@@ -1,5 +1,5 @@
-test
-====
+blink
+=====
 
 Rust project for the _Arduino Uno_.
 
