@@ -9,7 +9,8 @@ void setup()
 void loop()
 {
     val=analogRead(potpin);// read the value of the sensor and assign it to val
-    // Serial.println(val/2);// display the value of val
-    analogWrite(ledpin,val/2);// set up brightness（maximum value 255）
+    val = max(0, min(255, map(val, 200, 700, 0, 255)));
+    Serial.println(val);// display the value of val
+    analogWrite(ledpin,val);// set up brightness（maximum value 255）
     delay(10);// wait for 0.01 
 }
